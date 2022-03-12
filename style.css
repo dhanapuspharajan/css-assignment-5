@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  background-color: yellow;
+}
+h1 {
+  color: black;
+  text-align: center;
+}
+
+.box-con {
+  display: flex;
+  justify-content: center;
+}
+ol li {
+  display: flex;
+  flex-flow: row;
+}
+
+.num {
+  display: flex;
+  position: relative;
+  top: 110px;
+}
+.box {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+}
+
+.one {
+  animation-name: box-one;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-color: teal;
+}
+.two {
+  animation-name: box-two;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-color: steelblue;
+}
+.three {
+  animation-name: box-three;
+  background-color: teal;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.four {
+  animation-name: four;
+  animation: 1s infinite linear;
+}
+
+.x {
+  background-color: steelblue;
+  border: 2px solid rgb(29, 55, 77);
+  animation-name: x;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.y {
+  background-color: darkred;
+  border: 2px solid rgb(94, 13, 13);
+  animation-name: y;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.z {
+  background-color: green;
+  border: 2px solid rgb(23, 85, 23);
+  animation: z 4s infinite;
+}
+a {
+  text-decoration: none;
+}
+.page2link > h1 {
+  color: maroon;
+  text-decoration: underline 3px maroon;
+}
+
+/* page2 */
+
+#body-page2 {
+  background-color: yellow;
+}
+
+#tryto {
+  margin: auto;
+}
+.boxes {
+  display: flex;
+  justify-content: center;
+}
+
+.li {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 30px;
+  transition: width 2s;
+}
+
+.box2 {
+  transition: width 2s, height 2s;
+}
+
+.li:hover {
+  width: 300px;
+}
+
+.box2:hover {
+  width: 300px;
+  height: 300px;
+}
+
+#page2footer,
+h1 {
+  margin: 0;
+  color: blue;
+  text-decoration: underline 2px blue;
+}
+
+#body-car {
+  position: relative;
+  background-color: white;
+
+  overflow: hidden;
+}
+
+.page3-con {
+  border-top: 10px solid white;
+  border-left: 10px solid orangered;
+  border-right: 10px solid green;
+  border-bottom: 5px solid white;
+  height: 615px;
+  z-index: 4;
+}
+
+#sky {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  height: 600px;
+  width: 1350px;
+}
+#sun {
+  position: absolute;
+  top: 100px;
+  left: 1000px;
+  width: 200px;
+  height: 200px;
+  z-index: 3;
+  animation: sun 5s infinite linear;
+}
+
+#city {
+  position: absolute;
+  top: 270px;
+  z-index: -1;
+  animation: city 5s infinite linear;
+}
+#car {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  z-index: 2;
+  top: 410px;
+  left: 450px;
+}
+
+#road {
+  position: absolute;
+  height: 130px;
+  margin-left: 5px;
+  margin-right: 5px;
+  top: 500px;
+  animation: road 5s infinite linear;
+  z-index: -1;
+}
+
+#wheel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+  top: 490px;
+  left: 480px;
+  animation: wheels 2s infinite linear;
+}
+
+#wheel2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+  top: 490px;
+  left: 662px;
+  animation: wheels 2s infinite linear;
+}
+#flag {
+  position: absolute;
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+  top: 418px;
+  transform: rotate(15deg);
+  left: 680px;
+}
+.title {
+  display: flex;
+  position: relative;
+  top: 30px;
+  justify-content: center;
+  gap: 20px;
+}
+.title > h1 {
+  padding: 10px;
+}
+
+@keyframes box-one {
+  25% {
+    transform: skewX(10deg);
+  }
+  50% {
+    transform: skewX(-10deg);
+  }
+  75% {
+    transform: skewX(10deg);
+  }
+}
+@keyframes box-two {
+  25% {
+    transform: skewY(20deg);
+  }
+  50% {
+    transform: skewY(-20deg);
+  }
+  75% {
+    transform: skewY(20deg);
+  }
+}
+
+@keyframes box-three {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes x {
+  25% {
+    transform: scaleY(60%);
+  }
+}
+@keyframes y {
+  25% {
+    transform: scaleX(60%);
+  }
+}
+@keyframes z {
+  10% {
+    transform: rotate(-45deg);
+  }
+
+  90% {
+    transform: rotate(35deg);
+  }
+}
+
+@keyframes box2 {
+  to {
+    width: 300px;
+    height: 300px;
+  }
+}
+@keyframes scale {
+  50% {
+    width: 300px;
+    border-radius: 30px;
+  }
+}
+
+@keyframes wheels {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes road {
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes city {
+  to {
+    transform: translateX(-50px);
+  }
+}
+@keyframes sun {
+  to {
+    transform: translateX(-30px);
+  }
+}
